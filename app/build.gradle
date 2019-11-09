@@ -31,10 +31,12 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.github.arturogutierrez:badges:1.0.5@aar'
     implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
-    implementation 'com.adpdigital.push:chabok-lib:3.0.0'
+    implementation 'com.adpdigital.push:chabok-lib-geo:3.0.0'
     implementation 'com.android.support:design:28.+'
     implementation 'com.android.installreferrer:installreferrer:1.0'
     implementation "com.google.firebase:firebase-messaging:17.1.0"
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

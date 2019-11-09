@@ -20,8 +20,11 @@ public class SplashActivity extends Activity {
             public void run() {
                 String userId = AdpPushClient.get().getUserId();
 
-                Intent mainIntent = new Intent(SplashActivity.this, (userId != null && !"".equals(userId)) ? MainActivity.class : RegisterActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
+                Intent geoIntent = new Intent(SplashActivity.this, GeoActivity.class);
+                SplashActivity.this.startActivity(geoIntent);
+
+//                Intent mainIntent = new Intent(SplashActivity.this, (userId != null && !"".equals(userId)) ? MainActivity.class : RegisterActivity.class);
+//                SplashActivity.this.startActivity(mainIntent);
                 SplashActivity.this.finish();
             }
         }, 2000);
