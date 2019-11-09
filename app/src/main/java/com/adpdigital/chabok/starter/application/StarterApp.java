@@ -3,8 +3,9 @@ package com.adpdigital.chabok.starter.application;
 import android.app.Application;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
 
 import com.adpdigital.chabok.starter.activity.MainActivity;
 import com.adpdigital.push.AdpPushClient;
