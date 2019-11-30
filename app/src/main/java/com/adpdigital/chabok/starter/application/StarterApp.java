@@ -7,6 +7,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.adpdigital.chabok.starter.activity.MainActivity;
+import com.adpdigital.chabok.starter.service.OtherProcessService;
 import com.adpdigital.push.AdpPushClient;
 import com.adpdigital.push.ChabokNotification;
 import com.adpdigital.push.ChabokNotificationAction;
@@ -25,6 +26,8 @@ public class StarterApp extends Application {
 
     @Override
     public void onCreate() {
+        OtherProcessService.startPeriodicTask(this);
+
         super.onCreate();
 
         initPushClient();
@@ -32,6 +35,7 @@ public class StarterApp extends Application {
 
     private synchronized void initPushClient() {
         if (chabok == null) {
+            AdpPushClient.setApplicationContext(this); // Mandatory
             AdpPushClient.configureEnvironment(Environment.SANDBOX); // Mandatory
             AdpPushClient.setLogLevel(LogLevel.VERBOSE); // Optional
             AdpPushClient.setDefaultTracker("8iFRmA"); // Optional

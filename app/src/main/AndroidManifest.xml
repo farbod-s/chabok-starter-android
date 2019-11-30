@@ -37,6 +37,11 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".service.OtherProcessService"
+            android:exported="false"
+            android:process=":myprocess" />
+
     </application>
 
 </manifest>
